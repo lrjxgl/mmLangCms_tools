@@ -2,10 +2,10 @@
  mmLangCms工具,含Php\GoLang\java\uniApp等基于mysql自动生成代码工具  
 # 使用方法
  config.php 配置数据库信息  
- # go 
- goControl.php go控制器生成 
- goModel.php go模型生成 
- goApi.php go生成全部  
+ # go  
+ goControl.php go控制器生成  
+ goModel.php go模型生成  
+ goApi.php go生成全部   
  # php  
  phpControl.php php控制器生成  
  phpModel.php php模型生成  
