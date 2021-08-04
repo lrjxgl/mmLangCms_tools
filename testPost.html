@@ -1,0 +1,29 @@
+<meta charset="utf-8" />
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<div style="width: 600px;">
+<input value="http://127.0.0.1:1323/forum/save?id=2&title=aaa" style="width: 100%; margin:10px;" type="text" id="url" />
+<textarea style="width: 100%;height:200px; margin:10px;" id="content">{
+"title":"hahaha",
+"description":"吼吼吼"
+}</textarea>
+</div>
+<button id="submit">发送</button>
+<div id="res"></div>
+<script>
+$(function(){
+	$("#submit").click(function(){
+		var url=$("#url").val();
+		var data=JSON.parse($("#content").val());
+		$.ajax({
+			url:url,
+			data:data,
+			dataType:"json",
+			type:"POST",
+			success:function(res){
+				$("#res").html(JSON.stringify(res));
+			}
+		})
+	})
+})
+ 
+</script>
